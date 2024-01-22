@@ -1,6 +1,7 @@
 <?php
 
 use App\Livewire\PanelDashboard;
+use App\Livewire\PanelLogin;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -19,3 +20,4 @@ Route::get('/', function () {
 });
 
 Route::get('/panel', PanelDashboard::class);
+Route::get('/panel-login', PanelLogin::class);
