@@ -23,11 +23,14 @@
             style="position: absolute; inset: 0px auto auto 0px; margin: 0px; transform: translate(1193px, 61px);"
             data-popper-placement="bottom">
             <ul class="py-1" role="none">
+                <li> <a href="{{route('user.create')}}"
+                        class="block px-7 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-gray-600 dark:hover:text-white"
+                        role="menuitem">Create a New Panel User</a> </li>
                 <li> <a href="#"
-                        class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-gray-600 dark:hover:text-white"
+                        class="block px-7 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-gray-600 dark:hover:text-white"
                         role="menuitem">Edit Profile</a> </li>
                 <li> <button type="button" wire:click="logout"
-                        class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-gray-600 dark:hover:text-white"
+                        class="block px-7 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-gray-600 dark:hover:text-white"
                         role="menuitem">Sign out</button> </li>
             </ul>
         </div>

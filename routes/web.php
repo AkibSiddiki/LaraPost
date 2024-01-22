@@ -1,5 +1,6 @@
 <?php
 
+use App\Livewire\CreateUser;
 use App\Livewire\PanelDashboard;
 use App\Livewire\PanelLogin;
 use Illuminate\Support\Facades\Route;
@@ -19,5 +20,6 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/panel', PanelDashboard::class);
 Route::get('/panel-login', PanelLogin::class);
+Route::get('/panel', PanelDashboard::class);
+Route::get('/panel/create', CreateUser::class)->name('user.create');
