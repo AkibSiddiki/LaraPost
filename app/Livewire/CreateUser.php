@@ -26,15 +26,17 @@ class CreateUser extends Component
 
     public function create()
     {
-        // dd($this->validate());
-        if (User::create($this->validate())) {
-            $this->reset('name');
-            $this->reset('email');
-            $this->reset('password');
-            $this->reset('password_confirmation');
+        // dd(auth()->user()->is_super_admin);
+        if (auth()->user()->is_super_admin == 1) {
+            if (User::create($this->validate())) {
+                $this->reset('name');
+                $this->reset('email');
+                $this->reset('password');
+                $this->reset('password_confirmation');
 
-            $this->msg = 'New user created';
-        }
+                $this->msg = 'New User Created';
+            }
+        } else $this->msg = 'Fail To Create User';
     }
 
 

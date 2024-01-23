@@ -17,9 +17,9 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return redirect()->route('panel');
 });
 
-Route::get('/panel-login', PanelLogin::class);
-Route::get('/panel', PanelDashboard::class);
+Route::get('/panel', PanelDashboard::class)->name('panel');
+Route::get('/panel-login', PanelLogin::class)->name('panel.login');
 Route::get('/panel/create', CreateUser::class)->name('user.create');
